@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Kernel",
+  "version": "0.1.0",
+  "description": "Universal AI context layer — inject project context into any AI assistant",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": [
+    "https://claude.ai/*",
+    "https://chatgpt.com/*",
+    "https://gemini.google.com/*",
+    "https://grok.com/*",
+    "https://www.perplexity.ai/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Kernel — Project Context"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://claude.ai/*",
+        "https://chatgpt.com/*",
+        "https://gemini.google.com/*",
+        "https://grok.com/*",
+        "https://www.perplexity.ai/*"
+      ],
+      "js": [
+        "providers/claude.js",
+        "providers/chatgpt.js",
+        "providers/gemini.js",
+        "providers/grok.js",
+        "providers/perplexity.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

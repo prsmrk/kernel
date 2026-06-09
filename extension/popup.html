@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Kernel</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <span class="logo">⚡</span>
+    <h1>Kernel</h1>
+    <span class="subtitle">Project Context</span>
+  </div>
+
+  <form id="projectForm">
+    <div class="field">
+      <label for="name">Project Name</label>
+      <input type="text" id="name" placeholder="e.g. EcoHunt">
+    </div>
+    <div class="field">
+      <label for="description">Description</label>
+      <textarea id="description" placeholder="What does your project do?"></textarea>
+    </div>
+    <div class="field">
+      <label for="website">Website</label>
+      <input type="text" id="website" placeholder="https://...">
+    </div>
+    <div class="field">
+      <label for="industry">Industry</label>
+      <input type="text" id="industry" placeholder="e.g. EdTech, SaaS, Fintech">
+    </div>
+    <div class="field">
+      <label for="targetUsers">Target Users</label>
+      <input type="text" id="targetUsers" placeholder="e.g. Students, Founders">
+    </div>
+    <div class="field">
+      <label for="revenueModel">Revenue Model</label>
+      <input type="text" id="revenueModel" placeholder="e.g. Subscription, Freemium">
+    </div>
+    <div class="field">
+      <label for="stage">Stage</label>
+      <input type="text" id="stage" placeholder="e.g. Idea, MVP, Pre-launch">
+    </div>
+    <div class="field">
+      <label for="goals">Goals</label>
+      <input type="text" id="goals" placeholder="e.g. 10,000 users in 3 months">
+    </div>
+    <div class="field">
+      <label for="competitors">Competitors</label>
+      <input type="text" id="competitors" placeholder="e.g. Notion, Obsidian">
+    </div>
+    <div class="field">
+      <label for="brandVoice">Brand Voice</label>
+      <input type="text" id="brandVoice" placeholder="e.g. Friendly and ambitious">
+    </div>
+    <div class="field">
+      <label for="additionalContext">Additional Context</label>
+      <textarea id="additionalContext" placeholder="Anything else Claude should know..."></textarea>
+    </div>
+
+    <button type="submit" id="saveBtn">Save Context</button>
+  </form>
+
+  <script src="popup.js"></script>
+</body>
+</html>
